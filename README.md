@@ -116,7 +116,7 @@ Example response:
 
  ### `lor.getLeaderboard(region)`
 
- Return top players in that region, including: puuid, userName, and tagLine.
+ Return top players in that region, including: lp, name, and rank.
 
 | Parameter | Type     | Example | Description              |
 | :-------- | :------- |:------- |:------------------------ |
