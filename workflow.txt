@@ -1,0 +1,77 @@
+
+IMP:
+    The rate limit for a personal keys is by design very limited:
+
+    20 requests every 1 second
+    100 requests every 2 minutes
+
+TODO: Register application with Riot with working example
+    https://developer.riotgames.com/app-type
+
+    
+Grab the users PUUID
+ACCOUNT-V1
+/riot/account/v1/accounts/by-riot-id/{gameName}/{tagLine}
+
+{
+    "puuid": "K-1NczBPzqHG1Ab2BZx_Km2AV9uxo4S-l2v7Azy68P3gowMrM7fmyoehbKE3aYFmHIC_g8tnA9zPRw",
+    "gameName": "Aikado",
+    "tagLine": "Awoo"
+}
+
+Grab list of matches recently played by user
+LOR-MATCH-V1
+/lor/match/v1/matches/by-puuid/{puuid}/ids
+returns 20 matches
+[
+    "eb7c4936-46c4-4412-8aeb-322e0d545101",
+    "fe91666d-f983-4e28-b648-46ad66fe12a6",
+    "b2ba7769-53a9-4513-b96c-bf38060b1776",
+...
+]
+
+Grab info for each match played by matchId
+LOR-MATCH-V1
+/lor/match/v1/matches/{matchId}
+
+{
+    "metadata": {
+        "data_version": "2",
+        "match_id": "eb7c4936-46c4-4412-8aeb-322e0d545101",
+        "participants": [
+            "Jqah9Pqb-WYRie0uV_Uc3BWWJE19cRU8VnvBRU9ROJ6uMfK00Y8B-lL1oC9RwLkzVGXO2iDm03Gg2A",
+            "K-1NczBPzqHG1Ab2BZx_Km2AV9uxo4S-l2v7Azy68P3gowMrM7fmyoehbKE3aYFmHIC_g8tnA9zPRw"
+        ]
+    },
+    "info": {
+        "game_mode": "Constructed",
+        "game_type": "Ranked",
+        "game_start_time_utc": "2022-07-24T00:33:50.9287733+00:00",
+        "game_version": "live-green-3-11-15",
+        "players": [
+            {
+                "puuid": "Jqah9Pqb-WYRie0uV_Uc3BWWJE19cRU8VnvBRU9ROJ6uMfK00Y8B-lL1oC9RwLkzVGXO2iDm03Gg2A",
+                "deck_id": "77ef3e20-1984-4a81-8cac-f8ad8bf3865d",
+                "deck_code": "CMCACBQHEIBAIBYDGMBQCAQGBQVAIBACAUEASDQCAECAEBADAQDRUNS5AIAQGAQFAECAO6I",
+                "factions": [
+                    "faction_Ionia_Name",
+                    "faction_Shurima_Name"
+                ],
+                "game_outcome": "loss",
+                "order_of_play": 1
+            },
+            {
+                "puuid": "K-1NczBPzqHG1Ab2BZx_Km2AV9uxo4S-l2v7Azy68P3gowMrM7fmyoehbKE3aYFmHIC_g8tnA9zPRw",
+                "deck_id": "5904cd3d-6615-4bc4-b0d7-90044ea9a7f5",
+                "deck_code": "CMCQCAIEGQAQMBBKAEDAOMADAQCAEBAHAUCAOAINDQTW2AIDAQDTWZDZAEAQIB2P",
+                "factions": [
+                    "faction_Piltover_Name",
+                    "faction_Shurima_Name"
+                ],
+                "game_outcome": "win",
+                "order_of_play": 0
+            }
+        ],
+        "total_turn_count": 31
+    }
+}

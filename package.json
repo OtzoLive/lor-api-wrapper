@@ -1,0 +1,27 @@
+{
+  "name": "lor-api-wrapper",
+  "version": "1.0.0",
+  "description": "Node.js Riot Legends of Runeterra API Wrapper",
+  "main": "lor-api-wrapper.js",
+  "repository": {
+    "url": "https://github.com/OtzoLive/lor-api-wrapper"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "riot",
+    "legends of runeterra",
+    "LoR",
+    "riotgames",
+    "rest",
+    "api",
+    "node",
+    "javascript",
+    "http",
+    "wrapper"
+  ],
+  "author": "John 'OtzoLive' Waters <john@johncwaters.com>",
+  "license": "MIT"
+}
