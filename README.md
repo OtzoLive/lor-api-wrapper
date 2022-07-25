@@ -52,7 +52,7 @@ var puuid = await lor.getUserByName('Otzo', 'Otzo', 'Americas')
 ```
 
 ## API Reference
-The wrapper is designed to use selectors that match RIOT API documentation to simply use.
+The wrapper is designed to use selectors that match RIOT API documentation to simplify use.
 
 For more information visit [api.riotgames.com](https://developer.riotgames.com/apis#).
 
@@ -74,7 +74,7 @@ For more information visit [api.riotgames.com](https://developer.riotgames.com/a
 | `tagLine` | `string` | 'NA' | **Required**   |
 | `region` | `string` | 'Americas' | **Required**            |
 
-Note: This returns the same information as lor.getUserByPuuid(). The main difference is how you reference the user. Most likely you'll use their userName and tagLine in order to get their puuid for later use.
+Note: Returns the same information as lor.getUserByPuuid(). The main difference is how you call the user. Most likely you'll use their userName and tagLine to get their puuid for later use.
 
 Example response:
 ```js
@@ -85,7 +85,7 @@ tagLine: 'NA'}
 
 ### `lor.getUserMatchHistory(puuid, region)`
 
-Returns matchId's for the last 20 games played by selected user.
+Return matchId's for the last 20 games played by selected user.
 
 | Parameter | Type     | Example | Description              |
 | :-------- | :------- |:------- |:------------------------ |
@@ -105,7 +105,7 @@ Example response:
 ```
  ### `lor.getMatchDetails(matchId, region)`
 
- Returns match info, including: players, who won, decks played, and more.
+ Return match info, including: players, who won, decks played, and more.
 
 | Parameter | Type     | Example | Description              |
 | :-------- | :------- |:------- |:------------------------ |
@@ -115,7 +115,7 @@ Example response:
 
  ### `lor.getLeaderboard(region)`
 
- Returns top players in that region, including: puuid, userName, and tagLine.
+ Return top players in that region, including: puuid, userName, and tagLine.
 
 | Parameter | Type     | Example | Description              |
 | :-------- | :------- |:------- |:------------------------ |
@@ -123,7 +123,7 @@ Example response:
 
  ### `lor.getLorStatus(region)`
 
- Returns current server status for that region.
+ Return current server status for that region.
 
 | Parameter | Type     | Example | Description              |
 | :-------- | :------- |:------- |:------------------------ |
@@ -167,7 +167,7 @@ console.log(puuid);
 
 ```
 
-#### Grab list of most recently played games by user PUUID
+#### Grab list of top 20 most recently played games by user PUUID
 
 ```javascript
 var matches = await lor.getUserMatchHistory(puuid, 'Americas')
@@ -188,7 +188,7 @@ console.log(matches);
 ## Feedback
 
 
-I wrote this wrapper to use in my personal project.
+I wrote this wrapper to use in my own personal projects.
 My goal was to not only to reduce outside dependencies in my own projects, but also make the API easier to use.
 
 Writing this wrapper introduced me to javascript prototypes, classes, publishing NPM packages, and exporting/importing ES modules. 
