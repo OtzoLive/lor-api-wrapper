@@ -31,7 +31,7 @@ Get your key here: https://developer.riotgames.com/
 #### Getting started
 
 ```javascript
-import Lor from "lor-api-wrapper.js";
+import Lor from "lor-api-wrapper";
 
 //create instance with our Riot API Token
 var lor = new Lor(lorKey);
