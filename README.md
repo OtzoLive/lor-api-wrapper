@@ -10,7 +10,8 @@ Node.js Riot Legends of Runeterra API Wrapper
 - HTTPS REST API 
 - Easy access to API responses
 - Supports all LoR API endpoints
-- No additional dependences required
+- No external dependences required
+- Only uses Node:HTTPS
 
 
 ## Installation
