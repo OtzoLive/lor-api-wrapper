@@ -189,10 +189,9 @@ console.log(matches);
 ## Feedback
 
 
-I wrote this wrapper to use in my own personal projects.
-My goal was to not only to reduce outside dependencies in my own projects, but also make the API easier to use.
+I wrote this wrapper to use in my own personal project for tracking Legends of Runeterra Seasonal Tournaments, which does not have a native way of doing so. I was able to quickly create this wrapper by reusing code from my LIFX-Node-Wrapper.
 
-Writing this wrapper introduced me to javascript prototypes, classes, publishing NPM packages, and exporting/importing ES modules. 
+One issue I ran into was deciding how I wanted to handle errors when the API failed (which is alot unfortunately), either due to rate-limiting or random 504 errors. I wasn't sure if the wrapper should catch and handle errors by itself, or if it should just pass them off.
 
 Any and all feedback is appreciated.
 
