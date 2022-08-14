@@ -193,6 +193,8 @@ I wrote this wrapper to use in my own personal project for tracking Legends of R
 
 One issue I ran into was deciding how I wanted to handle errors when the API failed (which is alot unfortunately), either due to rate-limiting or random 504 errors. I wasn't sure if the wrapper should catch and handle errors by itself, or if it should just pass them off.
 
+This issue became apparent when implementing the wrapper into my project. I quickly realized not all errors are created equal and am already working on updating the wrapper to handle them better.
+
 Any and all feedback is appreciated.
 
 ### 🔗 Links
